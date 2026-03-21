@@ -1,0 +1,27 @@
+name: AES Corporation
+description: >-
+  The AES Corporation is a Fortune 500 global energy company that generates and
+  distributes electrical power. AES operates a diverse portfolio of renewable,
+  thermal, LNG, and battery storage facilities across multiple countries,
+  serving utilities, industrial facilities, and end users.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://github.com/api-evangelist/aes/blob/main/apis.yml
+created: '2025-03-01'
+modified: '2025-03-01'
+specificationVersion: '0.18'
+tags:
+  - Energy
+  - Power Generation
+  - Utility
+  - Renewable Energy
+  - Battery Storage
+apis: []
+common:
+  - type: Website
+    url: https://www.aes.com/
+  - type: About
+    url: https://www.aes.com/about-us
+maintainers:
+  - FN: API Evangelist
+    url: https://apievangelist.com
+    email: info@apievangelist.com

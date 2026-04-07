@@ -10,11 +10,11 @@ created: '2025-03-01'
 modified: '2025-03-01'
 specificationVersion: '0.18'
 tags:
+  - Battery Storage
   - Energy
   - Power Generation
-  - Utility
   - Renewable Energy
-  - Battery Storage
+  - Utility
 apis: []
 common:
   - type: Website

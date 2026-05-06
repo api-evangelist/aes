@@ -1,146 +1,71 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: AES Corporation
+providerId: aes
+created: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
+notes: AES sells power; Fluence sells software under enterprise contracts. FinOps mapping reflects
+  Fluence enterprise software subscription billing.
+tags:
+  - FinOps
+  - FOCUS
+  - Energy
+  - Battery Storage
+description: 'FOCUS-aligned FinOps for AES/Fluence: enterprise software subscription with
+  per-asset pricing.'
+sources:
+  - https://fluenceenergy.com/
+  - https://www.aes.com/
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
   dataSpec: FOCUS
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
-provider: AES Corporation
-providerId: aes
-publisherName: AES Corporation
-serviceCategory: API
-created: '2026-05-04'
-modified: '2026-05-04'
-tags:
-  - Energy
-  - Power Generation
-  - Renewable Energy
-  - Battery Storage
-  - Utility
-  - Clean Energy
-  - FinOps
-  - Cost Management
-  - FOCUS
-description: FinOps framework definition for the AES Corporation API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+publisherName: Fluence Energy, Inc.
+serviceCategory: Energy / Asset Management Software
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Subscription
+  billingFrequency: Annual
   billingCurrency: USD
   chargeCategories:
-    - Usage
     - Purchase
-    - Tax
-    - Credit
-    - Adjustment
-  chargeFrequency: Recurring
+    - Usage
 focusColumns:
-  ServiceName: AES Corporation
-  ServiceCategory: Developer Tools / API
-  ProviderName: AES Corporation
-  PublisherName: AES Corporation
-  InvoiceIssuerName: AES Corporation
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  ServiceName: Fluence (AES)
+  ServiceCategory: Energy Asset Management
+  ProviderName: AES Corporation / Fluence
+  PublisherName: Fluence Energy, Inc.
+  InvoiceIssuerName: Fluence Energy, Inc.
   BillingCurrency: USD
-  ChargeCategory: Usage
 meters:
+  - name: managed_assets_mw
+    unit: MW
+    aggregation: max
+    dimensions:
+      - asset_type
+      - region
   - name: api_requests
-    description: Count of billable API requests
     unit: request
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
+      - tenant
+      - environment
+  - name: subscription_fees
+    unit: year
     aggregation: sum
     dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: Fluence Mosaic API
-    baseURL: https://fluenceenergy.com
-    tags:
-      - Energy Storage
-      - Bidding
-      - AI
-      - Energy Markets
-      - Software
-    serviceName: Fluence Mosaic API
-    serviceCategory: API
-  - name: Fluence Nispera API
-    baseURL: https://fluenceenergy.com
-    tags:
-      - Asset Performance
-      - Renewables
-      - Operations
-      - Software
-      - Monitoring
-    serviceName: Fluence Nispera API
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
-maintainers:
-  - FN: API Evangelist
-    url: http://apievangelist.com
-    email: info@apievangelist.com
+      - product
+principles:
+  - name: Visibility
+    description: Reconcile annual Fluence invoices against managed-asset MW figures and the SOW
+      schedule.
+  - name: Allocation
+    description: Tag spend per asset portfolio and operating company.
+  - name: Optimization
+    description: Right-size Mosaic vs Nispera coverage to active assets; renegotiate at renewal
+      based on portfolio size.
+  - name: Accountability
+    description: Assign portfolio-software owner; review annual renewal exposure.

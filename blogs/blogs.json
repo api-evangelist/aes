@@ -3,12 +3,12 @@
   "feeds": [
     {
       "source": "https://www.aes.com/newsroom",
-      "feed_url": "https://www.aes.com/newsroom",
-      "title": "AES Newsroom",
+      "feed_url": "",
       "saved": 0,
-      "method": "html-scrape"
+      "method": "agent-scrape"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-21T17:00:00Z"
+  "fetched": "2026-06-27T12:21:34Z",
+  "agent_pulled": "2026-06-27"
 }

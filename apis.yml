@@ -70,6 +70,8 @@ apis:
       - url: https://fluenceenergy.com/software/nispera/
         type: Documentation
 common:
+  - type: DomainSecurity
+    url: security/aes-domain-security.yml
   - url: https://www.aes.com/
     type: Portal
   - url: https://www.aes.com/about-aes

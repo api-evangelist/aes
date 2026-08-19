@@ -34,7 +34,7 @@ description: >-
   18.7 million household equivalents through utilities in Indiana, Ohio, and
   El Salvador. AES also co-founded Fluence Energy, a leading energy storage
   and software platform company.
-specificationVersion: '0.16'
+specificationVersion: '0.23'
 maintainers:
   - FN: API Evangelist
     url: http://apievangelist.com

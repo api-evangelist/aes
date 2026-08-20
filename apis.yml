@@ -45,6 +45,12 @@ apis:
     tags:
       - Energy Storage
       - Bidding
+      - Artificial Intelligence
+      - Energy Markets
+      - Software
+    tags_raw:
+      - Energy Storage
+      - Bidding
       - AI
       - Energy Markets
       - Software
@@ -64,6 +70,11 @@ apis:
   - aid: aes:fluence-nispera-api
     name: Fluence Nispera API
     tags:
+      - Asset Performance
+      - Renewables
+      - Software
+      - Monitoring
+    tags_raw:
       - Asset Performance
       - Renewables
       - Operations

@@ -1,0 +1,37 @@
+generated: '2026-08-30'
+method: searched
+source: >-
+  Searched registry.npmjs.org, pypi.org, and the AES and Fluence web surfaces for
+  first-party client libraries, 2026-08-30.
+specification: API Commons Packages
+specificationVersion: '0.1'
+provider: AES Corporation
+providerId: aes
+package_count: 0
+official_package_count: 0
+packages: []
+note: >-
+  AES Corporation publishes no client libraries in any package registry, which follows
+  from publishing no API. No `SDKs` or `Packages` pointer is emitted.
+name_collision_warning: >-
+  Registry searches for this provider are heavily contaminated and must not be
+  auto-trusted. "aes" matches the AES block cipher (browserify-aes, aes-js,
+  aes-decrypter and hundreds more crypto libraries), and "fluence" matches Fluence
+  Labs, an unrelated decentralized-compute company that owns @fluencelabs/* on npm and
+  `fluence` on PyPI. None of these belong to The AES Corporation or to Fluence Energy,
+  Inc., and none were recorded.
+registries_probed:
+  - registry: npm
+    queries: [nispera, fluence-energy, fluenceenergy, aes-corporation]
+    first_party_hits: 0
+  - registry: pypi
+    queries: [nispera, fluence]
+    first_party_hits: 0
+    note: 'pypi.org/pypi/nispera/json -> 404; pypi.org/pypi/fluence/json -> 200 but is Fluence Labs, a different company.'
+  - registry: github
+    queries: [github.com/aes, github.com/Fluence-Energy]
+    first_party_hits: 0
+    note: >-
+      api.github.com/orgs/aes -> 404 (no such organization). The Fluence-Energy org
+      exists (id 76490608) but publishes zero public repositories, so there is no
+      source-code surface to derive an SDK from.

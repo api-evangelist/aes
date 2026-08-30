@@ -1,0 +1,79 @@
+# AES Corporation
+
+> The AES Corporation (NYSE: AES) is a Fortune 500 global power company that
+> generates and distributes electricity. AES runs 34.7 GW of renewable, thermal,
+> LNG and battery-storage capacity across the Americas and beyond, serves 18.7
+> million household equivalents through regulated utilities in Indiana, Ohio and
+> El Salvador, and is the largest supplier of clean energy to corporations in the
+> Americas. AES co-founded Fluence Energy with Siemens.
+
+## What an agent needs to know first
+
+AES Corporation publishes **no public API, no developer portal, no machine-readable
+contract and no SDK**. This file is generated from the API Evangelist catalog entry,
+not harvested from an AES developer site, because no AES developer site exists.
+Probed 2026-08-30:
+
+- https://www.aes.com/openapi.json — 404
+- https://www.aes.com/swagger.json — 404
+- https://www.aes.com/api-docs — 404
+- https://www.aes.com/llms.txt — 404
+- https://www.aes.com/.well-known/api-catalog — 404
+- https://www.aes.com/.well-known/agent-card.json — 404
+- api.aes.com — dangling CNAME to a decommissioned Azure host (NXDOMAIN)
+- github.com/aes — no such organization
+
+The two software products listed against AES in this catalog, **Mosaic** and
+**Nispera**, are built and sold by Fluence Energy, Inc. (NYSE: FLNC), the AES and
+Siemens joint venture. Both are enterprise platforms sold under contract; neither
+publishes an OpenAPI, public docs or a pricing page.
+
+## Company
+
+- [AES home](https://www.aes.com/): corporate site
+- [About AES](https://www.aes.com/about-aes): business overview
+- [Newsroom](https://www.aes.com/newsroom): press releases and energy insights
+- [Investors](https://www.aes.com/investors): filings, reports, governance
+- [Careers](https://www.aes.com/careers)
+- [Contact](https://www.aes.com/contact)
+
+## Products (enterprise, no public API)
+
+- [Fluence Mosaic](https://fluenceenergy.com/software/mosaic/): AI bidding
+  application that automates wholesale-market bidding for battery storage.
+- [Fluence Nispera](https://fluenceenergy.com/software/nispera/): asset performance
+  management for solar, wind and storage portfolios.
+- [Fluence IQ Platform](https://fluenceenergy.com/fluence-iq-digital-platform/):
+  the cloud platform both applications sit on. Fluence describes internal APIs; none
+  are publicly documented.
+
+## Regulatory posture
+
+- [FERC-registered entities](https://www.aes.com/ferc-registered-entities): the AES
+  generation, trading and utility entities registered with FERC, plus the FERC
+  standards-of-conduct posting.
+- [Ethics and compliance](https://www.aes.com/about-us/our-people/ethics-and-compliance)
+- [Corporate governance documents](https://www.aes.com/investors/governance/documents)
+- Regulated utilities: [AES Indiana](https://www.aesindiana.com/),
+  [AES Ohio](https://www.aesohio.com/). Neither publishes a Green Button / ESPI
+  customer-data API (probed 2026-08-30: /green-button 404, /openapi.json 404).
+
+## Legal
+
+- [Terms of use](https://www.aes.com/terms-conditions)
+- [Privacy policy](https://www.aes.com/privacy-policy)
+- [SMS terms of use](https://www.aes.com/sms-terms-use)
+
+## Security
+
+- No security.txt on www.aes.com (404). The only RFC 9116 file on any declared host
+  is Fluence's, and it expired 2026-01-01.
+- The HackerOne page at https://hackerone.com/aes is an unclaimed external directory
+  listing, not an AES-operated program.
+
+## If you need data from AES
+
+There is no self-serve path. Use https://www.aes.com/customer-contact-form for
+commercial enquiries and https://www.aes.com/investors/investor-contacts for
+investor data. Financial data is available through SEC EDGAR filings rather than
+from AES directly.

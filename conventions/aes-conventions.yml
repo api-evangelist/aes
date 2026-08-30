@@ -1,0 +1,60 @@
+generated: '2026-08-30'
+method: derived
+source: >-
+  Derived from the absence of any machine-readable contract after full STEP 0b
+  contract discovery against www.aes.com, fluenceenergy.com, www.aesindiana.com,
+  www.aesohio.com, api.aes.com and portal.aes.com, 2026-08-30.
+specification: API Commons Conventions
+specificationVersion: '0.1'
+provider: AES Corporation
+providerId: aes
+applicability: >-
+  AES Corporation publishes no API. Every convention below is recorded `na` — not
+  zero, not missing — because there is no request/response surface for a convention
+  to apply to. An honest `na` keeps this provider in the denominator rather than
+  scoring it as a provider that shipped an API and then documented nothing about it.
+auth_style:
+  status: na
+  note: 'No public API. The Fluence platforms authenticate tenants under contract; nothing is published.'
+idempotency:
+  status: na
+  header: null
+  scope: null
+  retention: null
+  note: >-
+    No write surface. No `Idempotency` pointer is emitted — the 9-point agent-readiness
+    dimension is genuinely not applicable here, not merely unfilled.
+pagination:
+  status: na
+  style: null
+field_expansion:
+  status: na
+metadata:
+  status: na
+request_id_tracing:
+  status: na
+versioning:
+  status: na
+  see: lifecycle/aes-lifecycle.yml
+error_envelope:
+  status: na
+  see: conformance/aes-conformance.yml
+rate_limit_signaling:
+  status: na
+  see: rate-limits/aes-rate-limits.yml
+dry_run_mode:
+  status: na
+  note: 'No callable operations to rehearse.'
+reversibility:
+  status: na
+  grade: na
+  write_surface_present: false
+  reversal_operations: []
+  note: >-
+    Reversibility is `na` for AES: there is no write surface, so there is no action an
+    agent could take that would need taking back. This is recorded explicitly rather
+    than left blank so it reads as "checked, not applicable" instead of "not checked".
+    If AES or Fluence ever publish a contract, the reversal operations to look for in
+    a storage-bidding product are bid cancellation before market close and dispatch
+    schedule rollback, each with the market gate-closure window that bounds it — but
+    no such window is asserted here, because nothing published states one.

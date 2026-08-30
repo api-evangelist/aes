@@ -1,0 +1,5 @@
+Contact: mailto:security@fluenceenergy.com
+Expires: 2026-01-01T04:59:00.000Z
+Preferred-Languages: en
+Canonical: https://fluenceenergy.com/.well-known/security.txt
+Hiring: https://fluenceenergy.com/energy-storage-careers/

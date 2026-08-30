@@ -1,0 +1,76 @@
+generated: '2026-08-30'
+method: probed
+source: >-
+  Live unauthenticated GET of every /.well-known/ path on each host declared in
+  apis.yml (www.aes.com from common[], fluenceenergy.com from both apis[].baseURL
+  entries), 2026-08-30.
+specification: API Commons Well-Known
+specificationVersion: '0.1'
+provider: AES Corporation
+providerId: aes
+note: >-
+  AES Corporation's own host, www.aes.com, serves NO /.well-known/ document at all —
+  every path returns the site's 178KB Drupal 404 page. The single real document found
+  anywhere in this repo's declared hosts is an RFC 9116 security.txt served by
+  fluenceenergy.com. Fluence Energy, Inc. (NYSE: FLNC) is the AES/Siemens joint
+  venture whose Mosaic and Nispera products are the two apis[] entries in this
+  apis.yml, and fluenceenergy.com is the declared baseURL for both — which is why the
+  host is probed here; the document itself is Fluence's, not AES's, and names
+  security@fluenceenergy.com. It is also EXPIRED: its own `Expires` field reads
+  2026-01-01T04:59:00.000Z, which passed eight months before this probe, so under
+  RFC 9116 section 2.5.5 it must no longer be relied on. For that reason a
+  `SecurityTxt` pointer is deliberately NOT emitted — a stale file is a record of a
+  lapsed process, not a live consent/disclosure surface.
+hosts:
+  - host: www.aes.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: fluenceenergy.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: well-known/aes-security.txt
+        content_type: text/plain
+        bytes: 224
+        expired: true
+        expires: '2026-01-01T04:59:00.000Z'
+        contact: mailto:security@fluenceenergy.com
+        served_by: Fluence Energy, Inc.
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null

@@ -1,0 +1,64 @@
+generated: '2026-08-30'
+method: probed
+source: >-
+  DNS/HTTP probes of aes.com subdomains and the 485-URL www.aes.com sitemap,
+  plus https://www.aes.com/newsroom, 2026-08-30.
+specification: API Commons Lifecycle
+specificationVersion: '0.1'
+provider: AES Corporation
+providerId: aes
+versioning:
+  scheme: none
+  documented: false
+  note: 'No API, therefore no versioning scheme.'
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  note: >-
+    No deprecation policy is published, and no API exists to deprecate. Recorded so
+    the absence is attributable rather than unexamined. No `Deprecation` pointer is
+    emitted.
+status_page:
+  published: false
+  probes:
+    - url: https://status.aes.com
+      status: 'DNS NXDOMAIN — Could not resolve host'
+  note: >-
+    No API or service status page. AES Indiana and AES Ohio publish consumer outage
+    maps for electricity service, which are not an API status surface. No `StatusPage`
+    pointer is emitted.
+sla:
+  published: false
+  note: 'Fluence Mosaic/Nispera SLAs are contractual; nothing is published publicly.'
+retired_endpoints:
+  - host: api.aes.com
+    product: 'AES Microgrid Energy API (inferred from the CNAME target name)'
+    state: retired-and-dangling
+    evidence:
+      - 'dig api.aes.com CNAME +short -> microgridenergy-api.azurewebsites.net.'
+      - 'dig microgridenergy-api.azurewebsites.net -> NXDOMAIN'
+      - 'curl https://api.aes.com/ -> curl (6) Could not resolve host'
+    note: >-
+      The strongest single piece of evidence in this repo that AES once operated a
+      public-facing API host. The CNAME survives; the Azure App Service behind it does
+      not. Nothing was published about its retirement — no changelog, no sunset
+      notice, no redirect. See security/aes-vulnerability-disclosure.yml for the
+      takeover exposure the leftover record creates.
+    checked: '2026-08-30'
+  - host: portal.aes.com
+    product: 'AES supplier/partner portal (ServiceNow)'
+    state: live-but-authenticated
+    evidence:
+      - 'dig portal.aes.com -> aesbigskyprod1.service-now.com'
+      - 'https://portal.aes.com/ -> 200, title "Portal AES via ServiceNow"'
+    note: >-
+      A live ServiceNow tenant. ServiceNow instances expose a REST/Table API, but it
+      sits behind tenant authentication and AES publishes no documentation for it, so
+      it is recorded as an observed surface, not a contract.
+    checked: '2026-08-30'
+changelog:
+  published: false
+  note: >-
+    AES publishes a newsroom and an "energy insights" feed (corporate news), not a
+    dated product or API changelog.

@@ -4,31 +4,34 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: AES Corporation
 providerId: aes
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
-notes: No publicly documented rate limits. Fluence platforms expose APIs to enterprise customers
-  under contract; thresholds are configured per deployment.
+generated: '2026-08-30'
+method: searched
+source: >-
+  https://www.aes.com/sitemap.xml (485 URLs, no developer or API documentation
+  section), https://fluenceenergy.com/software/mosaic/,
+  https://fluenceenergy.com/software/nispera/ — probed 2026-08-30.
+modified: '2026-08-30'
+reconciled: true
+limit_count: 0
+limits: []
+headers: []
 tags:
   - Rate Limiting
   - Energy
   - Battery Storage
-description: AES/Fluence does not publish public rate-limit documentation. Limits are governed
-  by enterprise deployment terms.
-sources:
-  - https://fluenceenergy.com/
-responseCodes:
-  throttled: 429
-  serviceUnavailable: 503
-limits:
-  - name: Enterprise deployment limit
-    scope: account
-    metric: varies
-    limit: see Fluence deployment contract
-policies:
-  - name: Deployment-scoped
-    description: Limits configured per Fluence Mosaic/Nispera tenant deployment.
-  - name: Backoff
-    description: Honor Retry-After; use exponential backoff with jitter.
+description: >-
+  AES Corporation documents no rate limits, because it publishes no API. No
+  X-RateLimit-*, RateLimit-* or Retry-After behaviour can be observed, and no
+  exhaustion status code is documented.
+notes: >-
+  limit_count is 0 on purpose. A prior bulk sweep dated 2026-05-04 wrote a placeholder
+  entry here — "Enterprise deployment limit / see Fluence deployment contract" — plus
+  a throttled/serviceUnavailable response-code pair, none of which appears in any AES
+  or Fluence document. Those were generated, not observed, and have been removed. An
+  honest zero is the measurement.
+observed_headers: false
+probes:
+  - url: https://www.aes.com/api-docs
+    status: 404
+  - url: https://fluenceenergy.com/api-docs
+    status: 404

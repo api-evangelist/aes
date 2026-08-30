@@ -34,7 +34,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aes.png
 created: '2025-03-01'
-modified: '2026-04-19'
+modified: '2026-08-30'
 description: >-
   The AES Corporation is a Fortune 500 global energy company that generates and
   distributes electrical power. AES operates a diverse portfolio of renewable,
@@ -104,8 +104,27 @@ apis:
       - url: https://fluenceenergy.com/software/nispera/
         type: Documentation
 common:
+  - type: Website
+    url: https://www.aes.com/
   - type: DomainSecurity
     url: security/aes-domain-security.yml
+  - type: LLMsTxt
+    url: llms/aes-llms.txt
+  - type: Conformance
+    url: conformance/aes-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/aes-lifecycle.yml
+  - type: Conventions
+    url: conventions/aes-conventions.yml
+  - url: https://www.aes.com/about-us/our-people/ethics-and-compliance
+    type: Compliance
+    title: AES Global Ethics and Compliance
+  - url: https://www.aes.com/customer-contact-form
+    type: Support
+    title: Contact the AES clean energy solutions team
+  - url: https://www.aes.com/ferc-registered-entities
+    type: Documentation
+    title: FERC-registered AES entities and standards-of-conduct posting
   - url: https://www.aes.com/
     type: Portal
   - url: https://www.aes.com/about-aes
@@ -118,7 +137,7 @@ common:
   - url: https://www.aes.com/careers
     type: Portal
     title: Careers
-  - url: https://www.aes.com/legal
+  - url: https://www.aes.com/terms-conditions
     type: TermsOfService
   - url: https://www.aes.com/privacy-policy
     type: PrivacyPolicy
@@ -181,3 +200,35 @@ common:
         description: AES Indiana and AES Ohio regulated electric utilities serving 2.7 million customers with digital customer portals and clean energy transition plans.
       - name: AES New Energy Technologies
         description: Innovation group developing next-generation energy solutions including AI-powered robotics, advanced energy storage, and grid modernization technologies.
+x-enrichment:
+  date: '2026-08-30'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AES Corporation runs no developer program at all — its 485-URL sitemap contains no
+    developer, API or documentation section, and the one host that ever looked like an
+    API, api.aes.com, is now a dangling CNAME to a decommissioned Azure App Service
+    (microgridenergy-api.azurewebsites.net, NXDOMAIN), so the only machine-readable
+    contract AES ever had has been retired without notice.
+  evidence:
+    - url: https://www.aes.com/openapi.json
+      status: 404
+    - url: https://www.aes.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.aes.com/.well-known/agent-card.json
+      status: 404
+    - url: https://www.aes.com/sitemap.xml
+      status: 200
+    - url: https://api.aes.com/
+      status: 0
+    - url: https://fluenceenergy.com/openapi.json
+      status: 404
+    - url: https://www.aesindiana.com/openapi.json
+      status: 404
+    - url: https://www.aesohio.com/openapi.json
+      status: 404
+  checked: '2026-08-30'

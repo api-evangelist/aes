@@ -1,0 +1,136 @@
+generated: '2026-08-30'
+method: searched
+source: >-
+  https://www.aes.com/ferc-registered-entities,
+  https://www.aes.com/about-us/our-people/ethics-and-compliance,
+  https://www.aes.com/investors/governance/documents,
+  https://www.aes.com/terms-conditions, https://www.aes.com/privacy-policy,
+  plus /.well-known and spec probes on www.aes.com, fluenceenergy.com,
+  www.aesindiana.com and www.aesohio.com — all 2026-08-30.
+specification: API Commons Conformance
+specificationVersion: '0.1'
+provider: AES Corporation
+providerId: aes
+scope: >-
+  Cross-cutting and domain standards asserted against AES Corporation. AES publishes
+  no machine-readable API contract, so every API-technical conformance below is
+  recorded false on the basis of a probe, not inferred from a missing spec.
+regulatory_regime:
+  id: energy_utilities
+  label: Energy & Utilities
+  applies: true
+  matched_via: tags
+  regimes_in_scope:
+    - FERC Order 889 / OASIS (US)
+    - Green Button / ESPI (North America)
+  note: >-
+    AES is squarely inside the US energy regime — it lists FERC-registered generation,
+    trading and utility entities and posts FERC standards of conduct — but the regime
+    obligations it meets are met as PDF and eTariff filings, not as a callable
+    interface.
+standards:
+  - id: openapi
+    conforms: false
+    evidence:
+      - 'https://www.aes.com/openapi.json — 404'
+      - 'https://www.aes.com/swagger.json — 404'
+      - 'https://www.aes.com/api-docs — 404'
+      - 'https://fluenceenergy.com/openapi.json — 404'
+      - 'https://www.aesindiana.com/openapi.json — 404'
+      - 'https://www.aesohio.com/openapi.json — 404'
+  - id: oauth2
+    conforms: false
+    evidence:
+      - 'https://www.aes.com/.well-known/oauth-authorization-server — 404'
+      - 'https://fluenceenergy.com/.well-known/oauth-authorization-server — 404'
+  - id: oidc
+    conforms: false
+    evidence:
+      - 'https://www.aes.com/.well-known/openid-configuration — 404'
+      - 'https://fluenceenergy.com/.well-known/openid-configuration — 404'
+  - id: rfc8615-well-known
+    conforms: false
+    evidence:
+      - 'www.aes.com serves no /.well-known/ document; every path returns the site 404 page'
+  - id: rfc9116-security-txt
+    conforms: partial
+    evidence:
+      - 'https://www.aes.com/.well-known/security.txt — 404'
+      - 'https://fluenceenergy.com/.well-known/security.txt — 200, but Expires 2026-01-01T04:59:00.000Z has passed'
+    note: >-
+      Present on the Fluence host only, and stale. Not conformant for AES Corporation.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence:
+      - 'No API surface to return problem+json'
+  - id: a2a-agent-card
+    conforms: false
+    evidence:
+      - 'https://www.aes.com/.well-known/agent-card.json — 404'
+      - 'https://www.aes.com/.well-known/agent.json — 404'
+      - 'https://fluenceenergy.com/.well-known/agent-card.json — 404'
+      - 'https://fluenceenergy.com/.well-known/agent.json — 404'
+  - id: mcp
+    conforms: false
+    evidence:
+      - 'No hosted MCP endpoint published or discoverable on any AES or Fluence host'
+domain_standards:
+  - id: green-button
+    label: Green Button / ESPI (NAESB REQ.21 energy usage information)
+    conforms: false
+    applicable: true
+    rationale: >-
+      AES Indiana and AES Ohio are regulated electric distribution utilities with
+      2.7 million customers, which is exactly the population Green Button Connect My
+      Data addresses. Neither publishes an ESPI endpoint or a Green Button page.
+    evidence:
+      - 'https://www.aesindiana.com/green-button — 404'
+      - 'https://www.aesindiana.com/openapi.json — 404'
+      - 'https://www.aesohio.com/openapi.json — 404'
+      - 'No ESPI/OAuth authorization surface on either host'
+  - id: ferc-order-889-oasis
+    label: FERC Order 889 / OASIS transmission information posting
+    conforms: partial
+    applicable: true
+    rationale: >-
+      AES publishes a FERC-registered-entities page listing 20 registered generation,
+      trading and utility affiliates and links a FERC standards-of-conduct posting,
+      and directs tariff readers to the FERC eTariff system. The obligation is
+      discharged as a PDF posting and a third-party filing system; AES publishes no
+      OASIS node URL or machine-readable transmission data of its own.
+    evidence:
+      - 'https://www.aes.com/ferc-registered-entities — 200, lists FERC-registered entities'
+      - 'https://www.aes.com/sites/vault/files/2025-04/FERC-posting-requirements_12-6-2022.pdf — FERC standards of conduct posting (PDF)'
+      - 'Page directs to www.ferc.gov eTariff for AES Ohio and AES Indiana tariffs; no AES-hosted OASIS URL given'
+  - id: ieee-2030-5
+    label: IEEE 2030.5 (Smart Energy Profile 2.0)
+    conforms: false
+    applicable: true
+    rationale: 'DER/storage operator with no published 2030.5 server or client conformance claim.'
+    evidence:
+      - 'No 2030.5 reference in the 485-URL www.aes.com sitemap or on fluenceenergy.com product pages'
+  - id: openadr
+    label: OpenADR (automated demand response)
+    conforms: false
+    applicable: true
+    evidence:
+      - 'No OpenADR certification or endpoint published on any AES or Fluence host'
+compliance_programs:
+  - name: AES Global Ethics and Compliance
+    url: https://www.aes.com/about-us/our-people/ethics-and-compliance
+    status: 200
+    type: corporate-ethics-and-compliance
+  - name: Corporate governance documents
+    url: https://www.aes.com/investors/governance/documents
+    status: 200
+    type: governance
+  - name: Supplier standards
+    url: https://www.aes.com/suppliers
+    status: 200
+    type: supply-chain
+certifications: []
+certifications_note: >-
+  No SOC 2, ISO 27001, PCI, HIPAA or FedRAMP attestation is published on any AES host.
+  AES publishes a corporate ethics-and-compliance program and governance documents,
+  which is what the Compliance pointer in apis.yml refers to — it is deliberately not
+  an assertion of a security certification.

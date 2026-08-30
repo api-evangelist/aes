@@ -1,0 +1,31 @@
+generated: '2026-08-30'
+method: searched
+source: >-
+  Searched for a hosted or packaged MCP server across AES and Fluence web surfaces,
+  npm, and the /.well-known probes on every declared host, 2026-08-30.
+specification: API Commons MCP
+specificationVersion: '0.1'
+provider: AES Corporation
+providerId: aes
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: none
+  verified: searched
+status: none
+tools: []
+note: >-
+  No MCP server exists for AES Corporation, hosted or local, and none was derived: a
+  candidate tool list can only be derived from an OpenAPI, and AES publishes no
+  contract of any kind. mode is `none` and no endpoint is invented. No `MCPServer`
+  pointer is emitted in apis.yml.
+probes:
+  - url: https://www.aes.com/.well-known/agent-card.json
+    status: 404
+  - url: https://fluenceenergy.com/.well-known/agent-card.json
+    status: 404
+  - registry: npm
+    query: 'fluence-energy / nispera / aes mcp'
+    hits: 0

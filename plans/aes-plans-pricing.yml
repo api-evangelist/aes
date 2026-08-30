@@ -4,46 +4,46 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: AES Corporation
 providerId: aes
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: false
-notes: AES Corporation is a power-generation utility; it does not sell developer APIs to the
-  public. The "API surface" referenced here is Fluence (the AES/Siemens battery-storage joint
-  venture) Mosaic and Nispera platforms, which are sold to utility/asset-owner customers under
-  enterprise software contracts.
+generated: '2026-08-30'
+method: searched
+source: >-
+  https://www.aes.com/ (485-URL sitemap searched for a pricing or plans page — none
+  exists), https://fluenceenergy.com/software/mosaic/,
+  https://fluenceenergy.com/software/nispera/,
+  https://www.aes.com/customer-contact-form — all probed 2026-08-30.
+modified: '2026-08-30'
+reconciled: true
+plan_count: 0
+plans: []
 tags:
   - Energy
   - Power Generation
   - Battery Storage
   - Renewable Energy
   - Utility
-description: AES does not publish a public developer API or pricing page. Fluence (the AES-related
-  battery-storage software vendor) sells Mosaic (bidding optimization) and Nispera (asset
-  performance management) to utility-scale customers under custom enterprise contracts.
-sources:
-  - https://fluenceenergy.com/
-  - https://www.aes.com/
-plans:
-  - id: aes-fluence-enterprise
-    name: Fluence Enterprise
-    type: enterprise
-    description: Custom enterprise software contract for Fluence Mosaic / Nispera (asset performance
-      management and bidding optimization). Pricing per portfolio.
-    entries:
-      - label: Asset-portfolio contract
-        name: custom
-        type: subscription
-        metric: contract
-        limit: -1
-        timeFrame: year
-        geo: global
-        unit: 1
-        price: contact sales
-        userMultiplied: false
-    elements:
-      - name: Fluence Mosaic
-      - name: Fluence Nispera
-      - name: Storage asset performance management
-      - name: Energy market bidding
+description: >-
+  AES Corporation publishes no plans and no pricing page of any kind. It sells
+  electricity under long-term power purchase agreements and regulated tariffs, not
+  metered software access. The two software products in this catalog entry, Fluence
+  Mosaic and Fluence Nispera, are sold by Fluence Energy, Inc. under enterprise
+  contract; both product pages end in a contact form, and neither publishes a tier, a
+  list price, an included quota or an overage rate.
+notes: >-
+  plan_count is 0 on purpose. A prior bulk sweep dated 2026-05-04 wrote a single
+  invented tier here called "Fluence Enterprise" with price "contact sales"; that was
+  a generated placeholder, not a published plan, and it has been removed. Recording
+  the honest zero is the finding: an agent or a buyer evaluating AES cannot obtain a
+  price without talking to sales, and that is a real property of this provider.
+pricing_model: enterprise-contract
+public_pricing_page: false
+self_serve: false
+probes:
+  - url: https://www.aes.com/sitemap.xml
+    status: 200
+    finding: '485 URLs, no /pricing, /plans or /rates page'
+  - url: https://fluenceenergy.com/software/mosaic/
+    status: 200
+    finding: 'Product page, contact-sales only'
+  - url: https://fluenceenergy.com/software/nispera/
+    status: 200
+    finding: 'Product page, contact-sales only'

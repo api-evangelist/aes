@@ -1,7 +1,9 @@
 ---
 title: AES Deploys AI Safety Platform in U.S. Operations
 url: https://www.prnewswire.com/news-releases/aes-deploys-ai-safety-platform-in-us-operations-302711682.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AES" press release artificial intelligence'
 position: 2
 source: serpapi-google

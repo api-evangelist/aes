@@ -1,7 +1,9 @@
 ---
 title: 'AES'' AI: Accelerating Renewable Energy Solutions'
 url: https://www.aes.com/about-us/innovation/ai-fund
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AES" press release artificial intelligence'
 position: 1
 source: serpapi-google

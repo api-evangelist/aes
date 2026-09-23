@@ -1,7 +1,9 @@
 ---
 title: Haven Safety AI Launches AI-Native Safety Intelligence ...
 url: https://www.blufftontoday.com/press-release/story/52645/haven-safety-ai-launches-ai-native-safety-intelligence-platform-co-founded-with-the-aes-corporation-and-ai-fund/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AES" press release artificial intelligence'
 position: 5
 source: serpapi-google

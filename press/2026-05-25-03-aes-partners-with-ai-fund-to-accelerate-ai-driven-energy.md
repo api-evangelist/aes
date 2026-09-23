@@ -1,7 +1,9 @@
 ---
 title: AES partners with AI Fund to accelerate AI-driven energy ...
 url: https://www.latitudemedia.com/industry-news/aes-partners-with-ai-fund-to-accelerate-ai-driven-energy-solutions/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AES" press release artificial intelligence'
 position: 3
 source: serpapi-google

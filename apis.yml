@@ -1,6 +1,6 @@
 aid: aes
 url: https://raw.githubusercontent.com/api-evangelist/aes/refs/heads/main/apis.yml
-name: AES Corporation
+name: AES
 tags:
   - Energy
   - Power Generation
@@ -232,3 +232,4 @@ x-coverage:
     - url: https://www.aesohio.com/openapi.json
       status: 404
   checked: '2026-08-30'
+x-legal-name: AES Corporation

@@ -104,6 +104,12 @@ apis:
       - url: https://fluenceenergy.com/software/nispera/
         type: Documentation
 common:
+  - type: Plans
+    url: plans/aes-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/aes-rate-limits.yml
+  - type: FinOps
+    url: finops/aes-finops.yml
   - type: Website
     url: https://www.aes.com/
   - type: DomainSecurity

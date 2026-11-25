@@ -85,26 +85,26 @@ Each property below is a page on APIs.io carrying the machine-readable artifact 
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Aes Domain Security](https://apis.io/security/aes/aes-domain-security/)
-- [Aes Vulnerability Disclosure](https://apis.io/security/aes/aes-vulnerability-disclosure/)
+- [AES Domain Security](https://apis.io/security/aes/aes-domain-security/)
+- [AES Vulnerability Disclosure](https://apis.io/security/aes/aes-vulnerability-disclosure/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [Aes Plans Pricing](https://apis.io/plans/aes/aes-plans-pricing/)
+- [AES Plans Pricing](https://apis.io/plans/aes/aes-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Aes Rate Limits](https://apis.io/rate-limits/aes/aes-rate-limits/)
+- [AES Rate Limits](https://apis.io/rate-limits/aes/aes-rate-limits/)
 
 #### FinOps (1)
 
 What the API costs to run, by operation.
 
-- [Aes Finops](https://apis.io/finops/aes/aes-finops/)
+- [AES Finops](https://apis.io/finops/aes/aes-finops/)
 
 ## Where to find this API
 
@@ -120,16 +120,16 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 19.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 22.8** — emerging · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
-| Discoverability | 73.2 |
+| Discoverability | 83.9 |
 | Contract quality | 0.0 |
 | Contract governance | 0.0 |
-| Operational transparency | 0.0 |
+| Operational transparency | 9.5 |
 | Developer ergonomics | 26.2 |
-| Access clarity | 28.9 |
+| Access clarity | 38.3 |
 
 **Agent readiness 2.5** — human-only
 
@@ -154,8 +154,14 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 19.7** — Energy & Utilities
+**Regulatory alignment 14.8** — Energy & Utilities
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aes/](https://apis.io/providers/aes/).
 
